@@ -2,6 +2,7 @@ package com.example.demoproyectofinalsamuel.controllers;
 
 import com.example.demoproyectofinalsamuel.Model.Clients;
 import com.example.demoproyectofinalsamuel.Model.Employees;
+import com.example.demoproyectofinalsamuel.Model.Sale;
 import com.example.demoproyectofinalsamuel.service.ModelFactoryControllerService;
 import com.example.demoproyectofinalsamuel.service.serviceImpl.Laboratory;
 import javafx.collections.ObservableList;
@@ -10,6 +11,9 @@ import java.util.List;
 
 public class ModelFactoryController implements ModelFactoryControllerService {
     Laboratory laboratory;
+
+
+
     private static class SingletonHolder {
         // El constructor de Singleton puede ser llamado desde aquí al ser protected
         private final static ModelFactoryController eINSTANCE = new ModelFactoryController();
@@ -59,9 +63,10 @@ public class ModelFactoryController implements ModelFactoryControllerService {
 
 
     @Override
-    public boolean probar(ModelFactoryController mfc,String name) {
-        return laboratory.getSaleService().probar(mfc,name);
+    public boolean makeSale(ModelFactoryController mfc,String name,String client,String product,int amount,int price,int total) {
+        return laboratory.getSaleService().makeSale(mfc,name,client,product,amount,price,total);
     }
+
 
     @Override
     public List<Clients> getClients() {
@@ -71,6 +76,11 @@ public class ModelFactoryController implements ModelFactoryControllerService {
     @Override
     public List<Employees> getEmployees() {
         return laboratory.getEmployeesService().getEmployees();
+    }
+
+    @Override
+    public List<Sale> getSale() {
+        return laboratory.getSaleService().getSale();
     }
 
 

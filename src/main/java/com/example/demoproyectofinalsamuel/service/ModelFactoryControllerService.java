@@ -2,6 +2,7 @@ package com.example.demoproyectofinalsamuel.service;
 
 import com.example.demoproyectofinalsamuel.Model.Clients;
 import com.example.demoproyectofinalsamuel.Model.Employees;
+import com.example.demoproyectofinalsamuel.Model.Sale;
 import com.example.demoproyectofinalsamuel.controllers.ModelFactoryController;
 import javafx.collections.ObservableList;
 
@@ -19,9 +20,10 @@ public interface ModelFactoryControllerService {
     boolean addE(String id, String name, String age, String phoneNumber, String experience,String mail);
     boolean removeE(Employees employes);
     boolean SearchE(String name);
-    boolean probar(ModelFactoryController mfc,String name);
+    boolean makeSale(ModelFactoryController mfc,String name,String client,String product,int amount,int price,int total);
      List<Clients> getClients();
      List<Employees>getEmployees();
+     List<Sale>getSale();
 
 
 

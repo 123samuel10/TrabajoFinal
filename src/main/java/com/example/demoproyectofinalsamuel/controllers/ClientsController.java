@@ -125,7 +125,7 @@ public class ClientsController implements Initializable {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
             alert.setTitle("ERROR");
-            alert.setContentText("NO SE HA CREADO EL ESTUDIANTE");
+            alert.setContentText("NO SE HA CREADO EL CLIENTE");
             alert.showAndWait();
         }
     }
