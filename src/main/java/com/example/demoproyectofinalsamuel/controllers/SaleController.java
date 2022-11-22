@@ -120,7 +120,11 @@ public class SaleController implements Initializable {
                 alert.showAndWait();
             }
         }catch (NumberFormatException e){
-
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("ERROR");
+            alert.setContentText("NO SE HA PODIDO REALIZAR LA VENTA");
+            alert.showAndWait();
         }
 
     }
