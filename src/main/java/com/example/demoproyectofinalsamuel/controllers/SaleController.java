@@ -64,14 +64,11 @@ public class SaleController {
     public void initData(ModelFactoryController mfc) {this.mfc=mfc;}
 
     @FXML
-    void probar(ActionEvent event) {
-        mfc.probar(mfc);
-
-    }
+    private TextField igualName;
 
     @FXML
     void btnAdd(ActionEvent event) {
-
+        mfc.probar(mfc,igualName.getText());
     }
 
     @FXML

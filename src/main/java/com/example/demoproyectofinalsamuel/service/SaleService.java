@@ -7,6 +7,6 @@ import com.example.demoproyectofinalsamuel.service.serviceImpl.ClientsServiceImp
 public interface SaleService {
 
 
-    boolean probar(ModelFactoryController mfc);
+    boolean probar(ModelFactoryController mfc,String name);
 
 }

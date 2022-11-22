@@ -27,8 +27,8 @@ public class ModelFactoryController implements ModelFactoryControllerService {
 
 
     @Override
-    public boolean add(String id, String name, String age, String phoneNumber, String mail, String product, int amount) {
-        return laboratory.getClientsService().add(id,name,age,phoneNumber,mail,product,amount);
+    public boolean add(String id, String name, String age, String phoneNumber, String mail) {
+        return laboratory.getClientsService().add(id,name,age,phoneNumber,mail);
 
     }
 
@@ -59,8 +59,8 @@ public class ModelFactoryController implements ModelFactoryControllerService {
 
 
     @Override
-    public boolean probar(ModelFactoryController mfc) {
-        return laboratory.getSaleService().probar(mfc);
+    public boolean probar(ModelFactoryController mfc,String name) {
+        return laboratory.getSaleService().probar(mfc,name);
     }
 
     @Override

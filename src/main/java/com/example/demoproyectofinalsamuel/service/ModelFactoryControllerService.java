@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface ModelFactoryControllerService {
     //parte cliente
-    boolean add(String id, String name, String age, String phoneNumber, String mail, String product, int amount);
+    boolean add(String id, String name, String age, String phoneNumber, String mail);
    // boolean add(String id, String name, String age, String phoneNumber, String mail, String product, int amount);
     String remove(Clients client);
     ObservableList<Clients> Search(String  client);
@@ -19,7 +19,7 @@ public interface ModelFactoryControllerService {
     boolean addE(String id, String name, String age, String phoneNumber, String experience,String mail);
     boolean removeE(Employees employes);
     boolean SearchE(String name);
-    boolean probar(ModelFactoryController mfc);
+    boolean probar(ModelFactoryController mfc,String name);
      List<Clients> getClients();
      List<Employees>getEmployees();
 

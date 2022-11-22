@@ -14,8 +14,8 @@ public class ClientsServiceImpl implements ClientsService {
 
 
     @Override
-    public boolean add(String id, String name, String age, String phoneNumber, String mail, String product, int amount) {
-        clients.add(new Clients(id,name,age,phoneNumber,mail,product,amount));
+    public boolean add(String id, String name, String age, String phoneNumber, String mail) {
+        clients.add(new Clients(id,name,age,phoneNumber,mail));
         System.out.println(clients.get(0).getName());
 
 
@@ -41,10 +41,10 @@ public class ClientsServiceImpl implements ClientsService {
 
     static List<Clients>Search(List<Clients>clientsR,String client){
         clientsR.forEach(clients -> {
-            if (clients.getName() == client) {
+            if (clients.getName().equals(client)) {
                 Alert alert=new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("DATOS ENCONTRADOS");
-                alert.setContentText("PRODUCTO: "+clients.getProduct()+" "+" CANTIDAD: "+clients.getAmount()+" "+"CORREO: "+" "+ "EDAD: "+clients.getMail()+clients.getAge());
+                alert.setContentText("CORREO: "+clients.getMail()+" "+ "EDAD: "+clients.getMail()+" "+"TELEFONO: "+clients.getPhoneNumber());
                 alert.showAndWait();
             }
         });

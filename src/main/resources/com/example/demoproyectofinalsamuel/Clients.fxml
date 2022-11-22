@@ -30,7 +30,7 @@
                      </font>
                   </Text>
                   <BorderPane fx:id="bp2" layoutX="13.0" prefHeight="618.0" prefWidth="903.0" />
-                  <Pane layoutX="265.0" layoutY="134.0" prefHeight="226.0" prefWidth="356.0" style="-fx-background-color: #CDD4F5;">
+                  <Pane layoutX="265.0" layoutY="134.0" prefHeight="170.0" prefWidth="356.0" style="-fx-background-color: #CDD4F5;">
                      <children>
                         <Text layoutX="3.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOMBRE:" />
                         <TextField fx:id="escribirNombre" layoutX="110.0" layoutY="2.0" prefHeight="25.0" prefWidth="235.0" style="-fx-border-color: #0A468A;" />
@@ -40,10 +40,6 @@
                         <TextField fx:id="escribirTelefono" layoutX="109.0" layoutY="80.0" prefHeight="25.0" prefWidth="236.0" style="-fx-border-color: #0A468A;" />
                         <Text layoutX="3.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CORREO:" wrappingWidth="67.6402587890625" />
                         <TextField fx:id="escribirCorreo" layoutX="109.0" layoutY="120.0" prefHeight="25.0" prefWidth="236.0" style="-fx-border-color: #0A468A;" />
-                        <Text layoutX="5.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CANTIDAD" wrappingWidth="79.6402587890625" />
-                        <TextField fx:id="escribirCantidad" layoutX="110.0" layoutY="192.0" prefHeight="25.0" prefWidth="236.0" style="-fx-border-color: #0A468A;" />
-                        <TextField fx:id="escribirProducto" layoutX="110.0" layoutY="153.0" prefHeight="25.0" prefWidth="236.0" style="-fx-border-color: #0A468A;" />
-                        <Text layoutX="3.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRODUCTO" wrappingWidth="67.6402587890625" />
                      </children>
                   </Pane>
                   <Pane layoutX="663.0" layoutY="134.0" prefHeight="213.0" prefWidth="263.0">
@@ -130,8 +126,6 @@
                         <TableColumn fx:id="mostrarEdad" prefWidth="75.0" text="EDAD" />
                         <TableColumn fx:id="mostrarTelefono" prefWidth="75.0" text="TELEFONO" />
                         <TableColumn fx:id="mostrarCorreo" prefWidth="75.0" text="CORREO" />
-                        <TableColumn fx:id="mostrarProducto" prefWidth="75.0" text="PRODUCTO" />
-                        <TableColumn fx:id="mostrarCantidad" prefWidth="75.0" text="CANTIDAD" />
                     </columns>
                   </TableView>
                   <Pane prefHeight="200.0" prefWidth="200.0">

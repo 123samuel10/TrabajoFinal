@@ -54,8 +54,7 @@ public class ClientsController implements Initializable {
         mostrarEdad.setCellValueFactory(new PropertyValueFactory("age"));
         mostrarTelefono.setCellValueFactory(new PropertyValueFactory("phoneNumber"));
         mostrarCorreo.setCellValueFactory(new PropertyValueFactory("mail"));
-        mostrarProducto.setCellValueFactory(new PropertyValueFactory("product"));
-        mostrarCantidad.setCellValueFactory(new PropertyValueFactory("amount"));
+
     }
     public void initData(ModelFactoryController mfc) {
         this.mfc = mfc;
@@ -111,7 +110,7 @@ public class ClientsController implements Initializable {
         try {
             String id = String.valueOf(Math.round(Math.random() * 100));
             if ("" != escribirNombre.getText()) {
-                mfc.add(id, escribirNombre.getText(), escribirEdad.getText(), escribirTelefono.getText(), escribirCorreo.getText(), escribirProducto.getText(), Integer.parseInt(escribirCantidad.getText()));
+                mfc.add(id, escribirNombre.getText(), escribirEdad.getText(), escribirTelefono.getText(), escribirCorreo.getText());
                 tabla.setItems(FXCollections.observableArrayList(mfc.getClients()));
                 tabla.refresh();
                 cleanUp();
@@ -172,8 +171,6 @@ public class ClientsController implements Initializable {
             this.escribirEdad.setText(clients.getAge());
             this.escribirTelefono.setText(clients.getPhoneNumber());
             this.escribirCorreo.setText(clients.getMail());
-            this.escribirProducto.setText(clients.getProduct());
-            this.escribirCantidad.setText(String.valueOf(clients.getAmount()));
         }
     }
     @FXML
@@ -186,9 +183,9 @@ public class ClientsController implements Initializable {
             alert.setContentText("Primero debes seleccinar un estudiante, Para poder modificar");
             alert.showAndWait();
         }else {
-           String id= String.valueOf(Math.round(Math.random()*100)); String name=this.escribirNombre.getText();String age=this.escribirEdad.getText();int amount= Integer.parseInt(this.escribirCantidad.getText());String producto=this.escribirProducto.getText();String phone=this.escribirTelefono.getText();String correo=this.escribirCorreo.getText();
-            Clients aux=new Clients(id,name,age,phone,correo,producto,amount);
-            if (!this.mfc.getClients().contains(aux)){clients.setAmount(aux.getAmount());clients.setMail(aux.getMail());clients.setProduct(aux.getProduct());clients.setId(aux.getId());clients.setAge(aux.getAge());clients.setName(aux.getName());clients.setPhoneNumber(aux.getPhoneNumber());
+           String id= String.valueOf(Math.round(Math.random()*100)); String name=this.escribirNombre.getText();String age=this.escribirEdad.getText();String phone=this.escribirTelefono.getText();String correo=this.escribirCorreo.getText();
+            Clients aux=new Clients(id,name,age,phone,correo);
+            if (!this.mfc.getClients().contains(aux)){clients.setId(aux.getId());clients.setAge(aux.getAge());clients.setName(aux.getName());clients.setPhoneNumber(aux.getPhoneNumber());
                 this.tabla.refresh();
                 cleanUp();
         }
@@ -196,10 +193,8 @@ public class ClientsController implements Initializable {
     }
     private void cleanUp() {
         escribirNombre.setText("");
-        escribirProducto.setText("");
         escribirEdad.setText("");
         escribirCorreo.setText("");
-        escribirCantidad.setText("");
         escribirTelefono.setText("");
     }
 }
