@@ -48,9 +48,6 @@ public class HomeController {
 
     @FXML
     private Pane pnlStatus;
-
-   ClientsServiceImpl clientsService=new ClientsServiceImpl();
-   EmployeesServiceImpl employeesService=new EmployeesServiceImpl();
    ModelFactoryController mfc=new ModelFactoryController();
 
     void initData(ModelFactoryController mfc) {
@@ -62,9 +59,6 @@ public class HomeController {
         Parent root = fxmlLoader.load();
         Scene scene=new Scene(root);
         Stage stage=(Stage) ((Node)event.getSource()).getScene().getWindow();
-        ClientsController controller = fxmlLoader.getController();
-        controller.initData(this.mfc);
-        fxmlLoader.setController(controller);
         stage.setScene(scene);
         stage.show();
     }
@@ -75,9 +69,6 @@ public class HomeController {
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage stage=(Stage) ((Node)event.getSource()).getScene().getWindow();
-        EmployeesController controller=fxmlLoader.getController();
-        controller.initData(this.mfc);
-        fxmlLoader.setController(controller);
         stage.setScene(scene);
         stage.show();
     }
@@ -88,9 +79,6 @@ public class HomeController {
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage stage=(Stage) ((Node)event.getSource()).getScene().getWindow();
-        ClientsController controller = fxmlLoader.getController();
-        controller.initData(this.mfc);
-        fxmlLoader.setController(controller);
         stage.setScene(scene);
         stage.show();
     }
@@ -101,9 +89,6 @@ public class HomeController {
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage stage=(Stage) ((Node)event.getSource()).getScene().getWindow();
-        SaleController controller=fxmlLoader.getController();
-        controller.initData(this.mfc);
-        fxmlLoader.setController(controller);
         stage.setScene(scene);
         stage.show();
     }

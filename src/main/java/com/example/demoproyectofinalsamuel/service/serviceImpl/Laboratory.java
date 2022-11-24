@@ -9,7 +9,7 @@ public class Laboratory {
     public Laboratory(){
         this.clientsService=new ClientsServiceImpl();
         this.employeesService=new EmployeesServiceImpl();
-        this.saleService=new SaleServiceImpl();
+        this.saleService=new SaleServiceImpl(this);
     }
 
     public SaleServiceImpl getSaleService() {

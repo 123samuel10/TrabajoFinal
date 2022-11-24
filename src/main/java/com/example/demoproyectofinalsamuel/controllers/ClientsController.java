@@ -16,7 +16,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 public class ClientsController implements Initializable {
-    ModelFactoryController mfc = new ModelFactoryController();
+    ModelFactoryController mfc = ModelFactoryController.getInstance();
+
     //textfield
     @FXML
     private TextField escribirProducto;
@@ -48,7 +49,9 @@ public class ClientsController implements Initializable {
     private TableView<Clients> tabla;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        System.out.println("****" + FXCollections.observableArrayList(mfc.getClients()));
         tabla.setItems(FXCollections.observableArrayList(mfc.getClients()));
+        tabla.refresh();
         mostrarId.setCellValueFactory(new PropertyValueFactory("id"));
         mostrarNombre.setCellValueFactory(new PropertyValueFactory("name"));
         mostrarEdad.setCellValueFactory(new PropertyValueFactory("age"));
@@ -74,9 +77,6 @@ public class ClientsController implements Initializable {
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        EmployeesController controller = fxmlLoader.getController();
-        controller.initData(this.mfc);
-        fxmlLoader.setController(controller);
         stage.setScene(scene);
         stage.setScene(scene);
         stage.show();
@@ -87,9 +87,6 @@ public class ClientsController implements Initializable {
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        ClientsController controller = fxmlLoader.getController();
-        controller.initData(this.mfc);
-        fxmlLoader.setController(controller);
         stage.setScene(scene);
         stage.show();
     }
@@ -99,9 +96,6 @@ public class ClientsController implements Initializable {
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        SaleController controller = fxmlLoader.getController();
-        controller.initData(this.mfc);
-        fxmlLoader.setController(controller);
         stage.setScene(scene);
         stage.show();
     }

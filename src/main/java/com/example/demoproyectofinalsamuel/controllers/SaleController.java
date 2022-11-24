@@ -1,10 +1,6 @@
 package com.example.demoproyectofinalsamuel.controllers;
-
 import com.example.demoproyectofinalsamuel.HelloApplication;
 import com.example.demoproyectofinalsamuel.Model.Sale;
-import com.example.demoproyectofinalsamuel.service.serviceImpl.ClientsServiceImpl;
-import com.example.demoproyectofinalsamuel.service.serviceImpl.EmployeesServiceImpl;
-import com.example.demoproyectofinalsamuel.service.serviceImpl.SaleServiceImpl;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -16,19 +12,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class SaleController implements Initializable {
-    ModelFactoryController mfc=new ModelFactoryController();
+    ModelFactoryController mfc=ModelFactoryController.getInstance();
     @FXML
     private TableView<Sale> tabla1;
     @FXML
@@ -92,16 +83,117 @@ public class SaleController implements Initializable {
         mostrarPrecio.setCellValueFactory(new PropertyValueFactory("price"));
         mostrarTotal.setCellValueFactory(new PropertyValueFactory("total"));
     }
-
     @FXML
     private TextField igualName;
-    @FXML
-    private Text productBanana;
+    //precios:
     @FXML
     private Text precioBanana;
+
+    @FXML
+    private Text precioCoco;
+
+    @FXML
+    private Text precioFresa;
+
+    @FXML
+    private Text precioLechuga;
+
+    @FXML
+    private Text precioLimon;
+
+    @FXML
+    private Text precioMango;
+
+    @FXML
+    private Text precioManzana;
+
+    @FXML
+    private Text precioNaranja;
+
+    @FXML
+    private Text precioPera;
+
+    @FXML
+    private Text precioPiña;
+
+    @FXML
+    private Text precioSandia;
+
+    @FXML
+    private Text precioUva;
+
+
+    //productos:
+    @FXML
+    private Text productoCoco;
+
+    @FXML
+    private Text productoFresa;
+
+    @FXML
+    private Text productoLechuga;
+
+    @FXML
+    private Text productoLimon;
+
+    @FXML
+    private Text productoMango;
+
+    @FXML
+    private Text productoManzana;
+
+    @FXML
+    private Text productoNaranja;
+
+    @FXML
+    private Text productoPera;
+
+    @FXML
+    private Text productoPiña;
+
+    @FXML
+    private Text productoSandia;
+
+    @FXML
+    private Text productoUva;
+    @FXML
+    private Text productBanana;
+    //cantidad:
     @FXML
     private TextField cantidadBanana;
 
+    @FXML
+    private TextField cantidadCoco;
+
+    @FXML
+    private TextField cantidadFresa;
+
+    @FXML
+    private TextField cantidadLechuga;
+
+    @FXML
+    private TextField cantidadLimon;
+
+    @FXML
+    private TextField cantidadMango;
+
+    @FXML
+    private TextField cantidadManzana;
+
+    @FXML
+    private TextField cantidadNaranja;
+
+    @FXML
+    private TextField cantidadPera;
+
+    @FXML
+    private TextField cantidadPiña;
+
+    @FXML
+    private TextField cantidadSandia;
+
+    @FXML
+    private TextField cantidadUvas;
     @FXML
     void btnAdd(ActionEvent event) {
         String nameM = igualName.getText();
@@ -109,7 +201,7 @@ public class SaleController implements Initializable {
 
         try {
             if ("" != cantidadBanana.getText()) {
-                mfc.makeSale(mfc, igualName.getText(), nameM,productBanana.getText(), amount, 100,2);
+                mfc.makeSale(igualName.getText(), nameM,productBanana.getText(), amount, 600,2);
                 tabla1.setItems(FXCollections.observableArrayList(mfc.getSale()));
                 tabla1.refresh();
             } else {

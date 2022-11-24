@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 public class EmployeesController implements Initializable {
+    ModelFactoryController mfc=ModelFactoryController.getInstance();
     @FXML
     private TextField escribirCorreo;
     @FXML
@@ -54,9 +55,6 @@ public class EmployeesController implements Initializable {
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage stage=(Stage) ((Node)event.getSource()).getScene().getWindow();
-        EmployeesController controller=fxmlLoader.getController();
-        controller.initData(this.mfc);
-        fxmlLoader.setController(controller);
         stage.setScene(scene);
     }
     @FXML
@@ -65,9 +63,6 @@ public class EmployeesController implements Initializable {
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
         Stage stage=(Stage) ((Node)event.getSource()).getScene().getWindow();
-        ClientsController controller = fxmlLoader.getController();
-        controller.initData(this.mfc);
-        fxmlLoader.setController(controller);
         stage.setScene(scene);
     }
     @FXML
@@ -79,7 +74,7 @@ public class EmployeesController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-    ModelFactoryController mfc=new ModelFactoryController();
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         tabla1.setItems(FXCollections.observableArrayList(mfc.getEmployees()));
@@ -89,9 +84,6 @@ public class EmployeesController implements Initializable {
         mostrarTelefono.setCellValueFactory(new PropertyValueFactory("phoneNumber"));
         mostrarCorreo.setCellValueFactory(new PropertyValueFactory("mail"));
         mostrarExpereincia.setCellValueFactory(new PropertyValueFactory("yearsExperience"));
-    }
-    public void initData(ModelFactoryController mfc) {
-        this.mfc=mfc;
     }
     @FXML
     void btnAdd(ActionEvent event) {

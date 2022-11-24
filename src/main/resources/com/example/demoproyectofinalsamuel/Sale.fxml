@@ -45,145 +45,145 @@
                               </Pane>
                               <Pane layoutX="171.0" layoutY="196.0" prefHeight="137.0" prefWidth="154.0">
                                  <children>
-                                    <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pera" />
-                                    <Text layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1000$" />
+                                    <Text fx:id="productoPera" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pera" />
+                                    <Text fx:id="precioPera" layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1000$" />
                                     <ImageView fitHeight="58.0" fitWidth="141.0" layoutX="33.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../../imagenes/pera.jpg" />
                                        </image>
                                     </ImageView>
-                                    <TextField layoutX="20.0" layoutY="99.0" prefHeight="25.0" prefWidth="115.0" />
+                                    <TextField fx:id="cantidadPera" layoutX="20.0" layoutY="99.0" prefHeight="25.0" prefWidth="115.0" />
                                  </children>
                               </Pane>
                               <Pane layoutX="328.0" layoutY="194.0" prefHeight="140.0" prefWidth="154.0">
                                  <children>
-                                    <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manzana" />
-                                    <Text layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1200$" />
+                                    <Text fx:id="productoManzana" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manzana" />
+                                    <Text fx:id="precioManzana" layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1200$" />
                                     <ImageView fitHeight="58.0" fitWidth="141.0" layoutX="33.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../../imagenes/manzana.jpg" />
                                        </image>
                                     </ImageView>
-                                    <TextField layoutX="20.0" layoutY="101.0" prefHeight="25.0" prefWidth="115.0" />
+                                    <TextField fx:id="cantidadManzana" layoutX="20.0" layoutY="101.0" prefHeight="25.0" prefWidth="115.0" />
                                  </children>
                               </Pane>
                               <Separator layoutX="482.0" layoutY="200.0" orientation="VERTICAL" prefHeight="151.0" prefWidth="6.0" />
                               <Pane layoutX="488.0" layoutY="194.0" prefHeight="140.0" prefWidth="154.0">
                                  <children>
-                                    <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Uvas" />
-                                    <Text layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1200$" />
+                                    <Text fx:id="productoUva" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Uvas" />
+                                    <Text fx:id="precioUva" layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1200$" />
                                     <ImageView fitHeight="58.0" fitWidth="141.0" layoutX="33.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../../imagenes/uvas.png" />
                                        </image>
                                     </ImageView>
-                                    <TextField layoutX="27.0" layoutY="101.0" prefHeight="25.0" prefWidth="115.0" />
+                                    <TextField fx:id="cantidadUvas" layoutX="27.0" layoutY="101.0" prefHeight="25.0" prefWidth="115.0" />
                                  </children>
                               </Pane>
                               <Separator layoutX="165.0" layoutY="197.0" orientation="VERTICAL" prefHeight="143.0" prefWidth="6.0" />
                               <Separator layoutX="322.0" layoutY="199.0" orientation="VERTICAL" prefHeight="144.0" prefWidth="6.0" />
                               <Pane layoutX="14.0" layoutY="351.0" prefHeight="138.0" prefWidth="154.0">
                                  <children>
-                                    <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mango" />
-                                    <Text layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3000$" />
+                                    <Text fx:id="productoMango" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mango" />
+                                    <Text fx:id="precioMango" layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3000$" />
                                     <ImageView fitHeight="58.0" fitWidth="98.0" layoutX="33.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../../imagenes/mango.jpg" />
                                        </image>
                                     </ImageView>
                                     <Separator layoutX="151.0" layoutY="-6.0" orientation="VERTICAL" prefHeight="131.0" prefWidth="4.0" />
-                                    <TextField layoutX="20.0" layoutY="100.0" prefHeight="25.0" prefWidth="115.0" />
+                                    <TextField fx:id="cantidadMango" layoutX="20.0" layoutY="100.0" prefHeight="25.0" prefWidth="115.0" />
                                  </children>
                               </Pane>
                               <Pane layoutX="171.0" layoutY="351.0" prefHeight="138.0" prefWidth="154.0">
                                  <children>
-                                    <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fresa" />
-                                    <Text layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1200$" />
+                                    <Text fx:id="productoFresa" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fresa" />
+                                    <Text fx:id="precioFresa" layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1200$" />
                                     <ImageView fitHeight="58.0" fitWidth="115.0" layoutX="49.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../../imagenes/fresa.jpg" />
                                        </image>
                                     </ImageView>
                                     <Separator layoutX="151.0" layoutY="-6.0" orientation="VERTICAL" prefHeight="131.0" prefWidth="4.0" />
-                                    <TextField layoutX="20.0" layoutY="100.0" prefHeight="25.0" prefWidth="115.0" />
+                                    <TextField fx:id="cantidadFresa" layoutX="20.0" layoutY="100.0" prefHeight="25.0" prefWidth="115.0" />
                                  </children>
                               </Pane>
                               <Pane layoutX="331.0" layoutY="351.0" prefHeight="138.0" prefWidth="154.0">
                                  <children>
-                                    <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Naranja" />
-                                    <Text layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3000$" />
+                                    <Text fx:id="productoNaranja" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Naranja" />
+                                    <Text fx:id="precioNaranja" layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3000$" />
                                     <ImageView fitHeight="203.0" fitWidth="98.0" layoutX="33.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../../imagenes/naranja.jpg" />
                                        </image>
                                     </ImageView>
                                     <Separator layoutX="151.0" layoutY="-6.0" orientation="VERTICAL" prefHeight="131.0" prefWidth="4.0" />
-                                    <TextField layoutX="20.0" layoutY="100.0" prefHeight="25.0" prefWidth="115.0" />
+                                    <TextField fx:id="cantidadNaranja" layoutX="20.0" layoutY="100.0" prefHeight="25.0" prefWidth="115.0" />
                                  </children>
                               </Pane>
                               <Pane layoutX="488.0" layoutY="351.0" prefHeight="138.0" prefWidth="154.0">
                                  <children>
-                                    <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Piña" />
-                                    <Text layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3000$" />
+                                    <Text fx:id="productoPiña" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Piña" />
+                                    <Text fx:id="precioPiña" layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3000$" />
                                     <ImageView fitHeight="58.0" fitWidth="98.0" layoutX="33.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../../imagenes/piña.jpg" />
                                        </image>
                                     </ImageView>
                                     <Separator layoutX="151.0" layoutY="-6.0" orientation="VERTICAL" prefHeight="131.0" prefWidth="4.0" />
-                                    <TextField layoutX="20.0" layoutY="100.0" prefHeight="25.0" prefWidth="115.0" />
+                                    <TextField fx:id="cantidadPiña" layoutX="20.0" layoutY="100.0" prefHeight="25.0" prefWidth="115.0" />
                                  </children>
                               </Pane>
                               <Pane layoutX="14.0" layoutY="489.0" prefHeight="138.0" prefWidth="154.0">
                                  <children>
-                                    <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lechuga" />
-                                    <Text layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="800$" />
+                                    <Text fx:id="productoLechuga" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lechuga" />
+                                    <Text fx:id="precioLechuga" layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="800$" />
                                     <ImageView fitHeight="58.0" fitWidth="98.0" layoutX="33.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../../imagenes/lechuga.jpg" />
                                        </image>
                                     </ImageView>
                                     <Separator layoutX="151.0" layoutY="-6.0" orientation="VERTICAL" prefHeight="131.0" prefWidth="4.0" />
-                                    <TextField layoutX="20.0" layoutY="100.0" prefHeight="25.0" prefWidth="115.0" />
+                                    <TextField fx:id="cantidadLechuga" layoutX="20.0" layoutY="100.0" prefHeight="25.0" prefWidth="115.0" />
                                  </children>
                               </Pane>
                               <Pane layoutX="171.0" layoutY="489.0" prefHeight="138.0" prefWidth="154.0">
                                  <children>
-                                    <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Limon" />
-                                    <Text layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="500$" />
+                                    <Text fx:id="productoLimon" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Limon" />
+                                    <Text fx:id="precioLimon" layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="500$" />
                                     <ImageView fitHeight="58.0" fitWidth="98.0" layoutX="33.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../../imagenes/limon.jpg" />
                                        </image>
                                     </ImageView>
                                     <Separator layoutX="151.0" layoutY="-6.0" orientation="VERTICAL" prefHeight="131.0" prefWidth="4.0" />
-                                    <TextField layoutX="20.0" layoutY="100.0" prefHeight="25.0" prefWidth="115.0" />
+                                    <TextField fx:id="cantidadLimon" layoutX="20.0" layoutY="100.0" prefHeight="25.0" prefWidth="115.0" />
                                  </children>
                               </Pane>
                               <Pane layoutX="331.0" layoutY="489.0" prefHeight="138.0" prefWidth="154.0">
                                  <children>
-                                    <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sandia" />
-                                    <Text layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5000$" />
+                                    <Text fx:id="productoSandia" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sandia" />
+                                    <Text fx:id="precioSandia" layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5000$" />
                                     <ImageView fitHeight="58.0" fitWidth="115.0" layoutX="33.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../../imagenes/sandia.jpg" />
                                        </image>
                                     </ImageView>
                                     <Separator layoutX="151.0" layoutY="-6.0" orientation="VERTICAL" prefHeight="131.0" prefWidth="4.0" />
-                                    <TextField layoutX="20.0" layoutY="100.0" prefHeight="25.0" prefWidth="115.0" />
+                                    <TextField fx:id="cantidadSandia" layoutX="20.0" layoutY="100.0" prefHeight="25.0" prefWidth="115.0" />
                                  </children>
                               </Pane>
                               <Pane layoutX="488.0" layoutY="489.0" prefHeight="138.0" prefWidth="154.0">
                                  <children>
-                                    <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coco" />
-                                    <Text layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3400$" />
+                                    <Text fx:id="productoCoco" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Coco" />
+                                    <Text fx:id="precioCoco" layoutX="118.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3400$" />
                                     <ImageView fitHeight="58.0" fitWidth="98.0" layoutX="33.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../../imagenes/Coco.jpg" />
                                        </image>
                                     </ImageView>
                                     <Separator layoutX="151.0" layoutY="-6.0" orientation="VERTICAL" prefHeight="131.0" prefWidth="4.0" />
-                                    <TextField layoutX="20.0" layoutY="100.0" prefHeight="25.0" prefWidth="115.0" />
+                                    <TextField fx:id="cantidadCoco" layoutX="20.0" layoutY="100.0" prefHeight="25.0" prefWidth="115.0" />
                                  </children>
                               </Pane>
                               <Separator layoutX="639.0" layoutY="198.0" orientation="VERTICAL" prefHeight="125.0" prefWidth="6.0" />

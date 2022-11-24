@@ -20,10 +20,11 @@ public interface ModelFactoryControllerService {
     boolean addE(String id, String name, String age, String phoneNumber, String experience,String mail);
     boolean removeE(Employees employes);
     boolean SearchE(String name);
-    boolean makeSale(ModelFactoryController mfc,String name,String client,String product,int amount,int price,int total);
+    boolean makeSale(String name,String client,String product,int amount,int price,int total);
      List<Clients> getClients();
      List<Employees>getEmployees();
      List<Sale>getSale();
+
 
 
 

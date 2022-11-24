@@ -16,9 +16,11 @@ public class ClientsServiceImpl implements ClientsService {
     @Override
     public boolean add(String id, String name, String age, String phoneNumber, String mail) {
         clients.add(new Clients(id,name,age,phoneNumber,mail));
-        System.out.println(clients.get(0).getName());
-
-
+        if (clients.size()>0){
+            for (Clients clients1:clients) {
+                System.out.println(clients1.getName());
+            }
+        }
         return true;
     }
 

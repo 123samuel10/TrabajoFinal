@@ -6,6 +6,6 @@ import com.example.demoproyectofinalsamuel.service.serviceImpl.ClientsServiceImp
 
 public interface SaleService {
 
-    boolean makeSale(ModelFactoryController mfc,String name,String client,String product,int amount,int price,int total);
+    boolean makeSale(String name,String client,String product,int amount,int price,int total);
 
 }
