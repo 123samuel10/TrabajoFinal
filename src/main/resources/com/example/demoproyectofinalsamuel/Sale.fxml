@@ -16,9 +16,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="1313.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demoproyectofinalsamuel.controllers.SaleController">
+<AnchorPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="881.0" prefWidth="1586.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demoproyectofinalsamuel.controllers.SaleController">
    <children>
-      <VBox fx:id="ap" layoutX="-7.0" layoutY="-4.0" prefHeight="618.0" prefWidth="254.0" style="-fx-background-color: #3F2b63;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox fx:id="ap" layoutX="-7.0" layoutY="-4.0" prefHeight="911.0" prefWidth="246.0" style="-fx-background-color: #3F2b63;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Pane prefHeight="151.0" prefWidth="262.0">
                <children>
@@ -247,7 +247,7 @@
          </children>
       </VBox>
       <Text layoutX="440.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="141.33676147460938" />
-      <Pane fx:id="pnlStatus" layoutX="247.0" prefHeight="106.0" prefWidth="1066.0" style="-fx-background-color: #7156DD;">
+      <Pane fx:id="pnlStatus" layoutX="247.0" prefHeight="106.0" prefWidth="1338.0" style="-fx-background-color: #7156DD;">
          <children>
             <Text fill="#f4f3f3" layoutX="42.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SALE">
                <font>
@@ -266,21 +266,31 @@
             </ImageView>
          </children>
       </Pane>
-      <Pane fx:id="tabla" layoutX="930.0" layoutY="393.0" prefHeight="206.0" prefWidth="374.0">
-         <children>
-            <TableView fx:id="tabla1" layoutY="6.0" prefHeight="200.0" prefWidth="374.0">
-              <columns>
-                <TableColumn fx:id="mostrarProducto" prefWidth="75.0" text="PRODUCTO" />
-                <TableColumn fx:id="mostrarCantidad" prefWidth="75.0" text="CANTIDAD" />
-                  <TableColumn fx:id="mostrarPrecio" prefWidth="75.0" text="PRECIO" />
-                  <TableColumn fx:id="mostrarTotal" prefWidth="75.0" text="TOTAL" />
-                  <TableColumn fx:id="mostrarCliente" prefWidth="75.0" text="CLIENTE" />
-              </columns>
-            </TableView>
-         </children>
-      </Pane>
       <Button layoutX="1161.0" layoutY="132.0" mnemonicParsing="false" onAction="#btnAdd" prefHeight="25.0" prefWidth="137.0" style="-fx-background-color: #453B5C;" text="AGREGAR" textFill="#f7f4f4" />
       <Button layoutX="1161.0" layoutY="177.0" mnemonicParsing="false" onAction="#btnRemove" prefHeight="25.0" prefWidth="137.0" style="-fx-background-color: #453B5C;" text="ELIMINAR" textFill="#fcf7f7" />
       <TextField fx:id="igualName" layoutX="988.0" layoutY="132.0" />
+      <Pane layoutX="250.0" layoutY="621.0" prefHeight="226.0" prefWidth="1302.0">
+         <children>
+            <TableView fx:id="tabla1" layoutX="22.0" layoutY="14.0" prefHeight="200.0" prefWidth="1244.0">
+               <columns>
+                  <TableColumn fx:id="mostrarProducto" prefWidth="83.199951171875" text="PRODUCTO 1" />
+                  <TableColumn fx:id="mostrarProducto2" prefWidth="90.4000244140625" text="PRODUCTO 2" />
+                  <TableColumn fx:id="mostrarProducto3" prefWidth="86.4000244140625" text="PRODUCTO 3" />
+                  <TableColumn fx:id="mostrarProducto4" prefWidth="92.0" text="PRODUCTO 4" />
+                  <TableColumn fx:id="mostrarProducto5" prefWidth="92.0" text="PRODUCTO 5" />
+                  <TableColumn fx:id="mostrarProducto6" prefWidth="81.60009765625" text="PRODUCTO 6" />
+                  <TableColumn fx:id="mostrarProducto7" prefWidth="81.60009765625" text="PRODUCTO 7" />
+                  <TableColumn fx:id="mostrarProducto8" prefWidth="81.60009765625" text="PRODUCTO 8" />
+                  <TableColumn fx:id="mostrarProducto9" prefWidth="81.60009765625" text="PRODUCTO 9" />
+                  <TableColumn fx:id="mostrarProducto10" prefWidth="96.7998046875" text="PRODUCTO 10" />
+                  <TableColumn fx:id="mostrarProducto11" prefWidth="96.7998046875" text="PRODUCTO 11" />
+                  <TableColumn fx:id="mostrarProducto12" prefWidth="96.7998046875" text="PRODUCTO 12" />
+                  <TableColumn fx:id="mostrarCantidad" prefWidth="73.60003662109375" text="CANTIDAD" />
+                  <TableColumn fx:id="mostrarTotal" prefWidth="57.5999755859375" text="TOTAL" />
+                  <TableColumn fx:id="mostrarCliente" prefWidth="75.199951171875" text="CLIENTE" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

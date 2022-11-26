@@ -28,8 +28,39 @@ public class SaleController implements Initializable {
     @FXML
     private TableColumn<Sale,String> mostrarCliente;
 
+
     @FXML
-    private TableColumn<Sale, Integer> mostrarPrecio;
+    private TableColumn<Sale,String> mostrarProducto10;
+
+    @FXML
+    private TableColumn<Sale,String> mostrarProducto11;
+
+    @FXML
+    private TableColumn<Sale,String> mostrarProducto12;
+
+    @FXML
+    private TableColumn<Sale,String> mostrarProducto2;
+
+    @FXML
+    private TableColumn<Sale,String> mostrarProducto3;
+
+    @FXML
+    private TableColumn<Sale,String> mostrarProducto4;
+
+    @FXML
+    private TableColumn<Sale,String> mostrarProducto5;
+
+    @FXML
+    private TableColumn<Sale,String> mostrarProducto6;
+
+    @FXML
+    private TableColumn<Sale,String> mostrarProducto7;
+
+    @FXML
+    private TableColumn<Sale,String> mostrarProducto8;
+
+    @FXML
+    private TableColumn<Sale,String> mostrarProducto9;
 
     @FXML
     private TableColumn<Sale,String > mostrarProducto;
@@ -72,16 +103,25 @@ public class SaleController implements Initializable {
     }
 
 
-    public void initData(ModelFactoryController mfc) {this.mfc=mfc;}
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         tabla1.setItems(FXCollections.observableArrayList(mfc.getSale()));
         mostrarCliente.setCellValueFactory(new PropertyValueFactory("name"));
-        mostrarProducto.setCellValueFactory(new PropertyValueFactory("product"));
+        mostrarProducto.setCellValueFactory(new PropertyValueFactory("productOne"));
+        mostrarProducto2.setCellValueFactory(new PropertyValueFactory("productTwo"));
+        mostrarProducto3.setCellValueFactory(new PropertyValueFactory("productThree"));
+        mostrarProducto4.setCellValueFactory(new PropertyValueFactory("productFour"));
+        mostrarProducto5.setCellValueFactory(new PropertyValueFactory("productFive"));
+        mostrarProducto6.setCellValueFactory(new PropertyValueFactory("productSix"));
+        mostrarProducto7.setCellValueFactory(new PropertyValueFactory("productSeven"));
+        mostrarProducto8.setCellValueFactory(new PropertyValueFactory("productEight"));
+        mostrarProducto9.setCellValueFactory(new PropertyValueFactory("productNine"));
+        mostrarProducto10.setCellValueFactory(new PropertyValueFactory("productTen"));
+        mostrarProducto11.setCellValueFactory(new PropertyValueFactory("productElevent"));
+        mostrarProducto12.setCellValueFactory(new PropertyValueFactory("productTwelve"));
         mostrarCantidad.setCellValueFactory(new PropertyValueFactory("amount"));
-        mostrarPrecio.setCellValueFactory(new PropertyValueFactory("price"));
         mostrarTotal.setCellValueFactory(new PropertyValueFactory("total"));
+        mostrarCliente.setCellValueFactory(new PropertyValueFactory("client"));
     }
     @FXML
     private TextField igualName;
@@ -196,12 +236,13 @@ public class SaleController implements Initializable {
     private TextField cantidadUvas;
     @FXML
     void btnAdd(ActionEvent event) {
+
         String nameM = igualName.getText();
         int amount= Integer.parseInt(cantidadBanana.getText());
 
         try {
             if ("" != cantidadBanana.getText()) {
-                mfc.makeSale(igualName.getText(), nameM,productBanana.getText(), amount, 600,2);
+                mfc.makeSale(igualName.getText(),nameM,productBanana.getText(),productoPera.getText(),productoManzana.getText(),productoUva.getText(),productoMango.getText(),productoFresa.getText(),productoNaranja.getText(),productoPiña.getText(),productoLechuga.getText(),productoLimon.getText(),productoSandia.getText(),productoCoco.getText(),amount,100,2);
                 tabla1.setItems(FXCollections.observableArrayList(mfc.getSale()));
                 tabla1.refresh();
             } else {

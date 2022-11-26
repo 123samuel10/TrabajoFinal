@@ -133,10 +133,10 @@
                   <TableView fx:id="tabla1" prefHeight="170.0" prefWidth="624.0" GridPane.rowIndex="1">
                      <columns>
                         <TableColumn fx:id="mostrarId" prefWidth="91.199951171875" text="ID" />
-                        <TableColumn fx:id="mostrarNombre" prefWidth="96.0" text="NOMBRE" />
-                        <TableColumn fx:id="mostrarEdad" prefWidth="94.40005493164062" text="EDAD" />
-                        <TableColumn fx:id="mostrarTelefono" prefWidth="100.0" text="TELEFONO" />
-                        <TableColumn fx:id="mostrarCorreo" prefWidth="132.0" text="CORREO" />
+                        <TableColumn fx:id="mostrarNombre" prefWidth="136.79998779296875" text="NOMBRE" />
+                        <TableColumn fx:id="mostrarEdad" prefWidth="45.60003662109375" text="EDAD" />
+                        <TableColumn fx:id="mostrarTelefono" prefWidth="122.39996337890625" text="TELEFONO" />
+                        <TableColumn fx:id="mostrarCorreo" prefWidth="119.20001220703125" text="CORREO" />
                         <TableColumn fx:id="mostrarExpereincia" prefWidth="113.5999755859375" text="EXPERIENCIA" />
                      </columns>
                   </TableView>

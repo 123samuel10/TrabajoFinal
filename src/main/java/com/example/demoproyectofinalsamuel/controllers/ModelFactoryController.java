@@ -63,8 +63,8 @@ public class ModelFactoryController implements ModelFactoryControllerService {
 
 
     @Override
-    public boolean makeSale(String name,String client,String product,int amount,int price,int total) {
-        return laboratory.getSaleService().makeSale(name,client,product,amount,price,total);
+    public boolean makeSale(String name,String client,String productOne,String productTwo,String productThree,String productFour,String productFive,String productSix,String productSeven,String productEight,String productNine,String productTen,String productElevent,String productTwelve,int amount,int price,int total) {
+        return laboratory.getSaleService().makeSale(name,client,productOne,productTwo,productThree,productFour,productFive,productSix,productSeven,productEight,productNine,productTen,productElevent,productTwelve,amount,price,total);
     }
 
 

@@ -121,11 +121,11 @@
                <children>
                   <TableView fx:id="tabla" prefHeight="189.0" prefWidth="624.0" GridPane.rowIndex="1">
                     <columns>
-                      <TableColumn fx:id="mostrarId" prefWidth="75.0" text="ID" />
-                      <TableColumn fx:id="mostrarNombre" prefWidth="75.0" text="NOMBRE" />
-                        <TableColumn fx:id="mostrarEdad" prefWidth="75.0" text="EDAD" />
-                        <TableColumn fx:id="mostrarTelefono" prefWidth="75.0" text="TELEFONO" />
-                        <TableColumn fx:id="mostrarCorreo" prefWidth="75.0" text="CORREO" />
+                      <TableColumn fx:id="mostrarId" prefWidth="98.4000244140625" text="ID" />
+                      <TableColumn fx:id="mostrarNombre" prefWidth="120.79998779296875" text="NOMBRE" />
+                        <TableColumn fx:id="mostrarEdad" prefWidth="51.20001220703125" text="EDAD" />
+                        <TableColumn fx:id="mostrarTelefono" prefWidth="179.99993896484375" text="TELEFONO" />
+                        <TableColumn fx:id="mostrarCorreo" prefWidth="176.00006103515625" text="CORREO" />
                     </columns>
                   </TableView>
                   <Pane prefHeight="200.0" prefWidth="200.0">
