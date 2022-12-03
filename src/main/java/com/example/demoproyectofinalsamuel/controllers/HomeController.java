@@ -48,11 +48,6 @@ public class HomeController {
 
     @FXML
     private Pane pnlStatus;
-   ModelFactoryController mfc=new ModelFactoryController();
-
-    void initData(ModelFactoryController mfc) {
-        this.mfc=mfc;
-    }
     @FXML
     void page1(ActionEvent event) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Home.fxml"));

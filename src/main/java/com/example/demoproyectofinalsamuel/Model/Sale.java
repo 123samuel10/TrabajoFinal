@@ -1,7 +1,4 @@
 package com.example.demoproyectofinalsamuel.Model;
-
-import com.example.demoproyectofinalsamuel.service.serviceImpl.ClientsServiceImpl;
-
 public class Sale {
    private String name;
    private String product;
@@ -19,10 +16,10 @@ public class Sale {
    private String productTwelve;
    private int amount;
    private int total;
-   private int price;
+   private int  price;
 
    private String  client;
-    public Sale(String client,String productOne,String productTwo,String productThree,String productFour,String productFive,String productSix,String productSeven,String productEight,String productNine,String productTen,String productElevent,String productTwelve,int amount,int price,int total) {
+    public Sale(String client,String productOne,String productTwo,String productThree,String productFour,String productFive,String productSix,String productSeven,String productEight,String productNine,String productTen,String productElevent,String productTwelve,int amount,int total) {
         this.client=client;
         this.productOne=productOne;
         this.productTwo=productTwo;
@@ -37,10 +34,25 @@ public class Sale {
         this.productElevent=productElevent;
         this.productTwelve=productTwelve;
         this.amount=amount;
-        this.price=price;
         this.total=total;
 
 
+    }
+
+    public int getTotal() {
+        return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 
     public String getClient() {
@@ -51,12 +63,12 @@ public class Sale {
         this.client = client;
     }
 
-    public int getPrice() {
-        return price;
+    public int getAmount() {
+        return amount;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 
     public String getProductNine() {
@@ -123,21 +135,7 @@ public class Sale {
         this.name = name;
     }
 
-    public int getAmount() {
-        return amount;
-    }
 
-    public int getTotal() {
-        return total;
-    }
-
-    public void setTotal(int total) {
-        this.total = total;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
 
     public String getProduct() {
         return product;
