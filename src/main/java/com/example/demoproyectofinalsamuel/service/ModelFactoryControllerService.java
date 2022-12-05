@@ -23,6 +23,7 @@ public interface ModelFactoryControllerService {
     //sale
     boolean makeSale(String name,String client,String productOne,String productTwo,String productThree,String productFour,String productFive,String productSix,String productSeven,String productEight,String productNine,String productTen,String productElevent,String productTwelve,int  amount,int  total);
     boolean removeSale(Sale sale1);
+    boolean discount();
      List<Clients> getClients();
      List<Employees>getEmployees();
      List<Sale>getSale();

@@ -35,6 +35,21 @@ public class SaleServiceImpl implements SaleService {
         return false;
     }
 
+    @Override
+    public boolean discount() {
+
+        laboratory.getSaleService().getSale().forEach(sale1 -> {
+            if (sale1!=null && sale1.getTotal()>50000){
+                Alert alert=new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("HA OBTENIDO UN DESCUENTO, POR SUPERAR LA COMPRA DE 50.000");
+                alert.setContentText("POR TANTO EL TOTAL DE SU COMPRA ES:"+(sale1.getTotal()-30000));
+                alert.showAndWait();
+            }
+        });
+
+        return false;
+    }
+
 
     public List<Sale> getSale() {
         return sale;

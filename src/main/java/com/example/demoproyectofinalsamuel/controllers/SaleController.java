@@ -1,5 +1,6 @@
 package com.example.demoproyectofinalsamuel.controllers;
 import com.example.demoproyectofinalsamuel.HelloApplication;
+import com.example.demoproyectofinalsamuel.Model.Clock;
 import com.example.demoproyectofinalsamuel.Model.Sale;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -12,12 +13,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
 public class SaleController implements Initializable {
+
     ModelFactoryController mfc=ModelFactoryController.getInstance();
     @FXML
     private TableView<Sale> tabla1;
@@ -85,8 +89,11 @@ public class SaleController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+    @FXML
+    private Text reloj1;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        new Clock(reloj1);
         tabla1.setItems(FXCollections.observableArrayList(mfc.getSale()));
         mostrarCliente.setCellValueFactory(new PropertyValueFactory("name"));
         mostrarProducto.setCellValueFactory(new PropertyValueFactory("productOne"));
@@ -160,8 +167,10 @@ public class SaleController implements Initializable {
     int total=0;
 
     int totalAmount=0;
+
     @FXML
     void btnAdd(ActionEvent event) {
+
         //total de la factura
         int ternario=this.productBanana.getText().equals("Banana")?Integer.parseInt(cantidadBanana.getText())*600:0;
         int ternarioDos=this.productoPera.getText().equals("Pera")?Integer.parseInt(cantidadPera.getText())*1000:0;
@@ -183,6 +192,7 @@ public class SaleController implements Initializable {
         try {
             if ("" != cantidadBanana.getText()) {
                 mfc.makeSale(igualName.getText(),nameM,productBanana.getText(),productoPera.getText(),productoManzana.getText(),productoUva.getText(),productoMango.getText(),productoFresa.getText(),productoNaranja.getText(),productoPiña.getText(),productoLechuga.getText(),productoLimon.getText(),productoSandia.getText(),productoCoco.getText(),totalAmount,total);
+                mfc.discount();
                 tabla1.setItems(FXCollections.observableArrayList(mfc.getSale()));
                 tabla1.refresh();
             } else {
@@ -215,4 +225,13 @@ public class SaleController implements Initializable {
             tabla1.refresh();
         }
 }
+    @FXML
+    private Pane reloj;
+
+
+
+
+
+
+
 }

@@ -72,6 +72,11 @@ public class ModelFactoryController implements ModelFactoryControllerService {
         return laboratory.getSaleService().removeSale(sale1);
     }
 
+    @Override
+    public boolean discount() {
+        return laboratory.getSaleService().discount();
+    }
+
 
     @Override
     public List<Clients> getClients() {
