@@ -25,6 +25,7 @@ public class ClientsServiceImpl implements ClientsService {
     @Override
     public boolean remove(Clients client) {
         clients.remove(client);
+        saveClientsPersistence();
         return true;
     }
 
