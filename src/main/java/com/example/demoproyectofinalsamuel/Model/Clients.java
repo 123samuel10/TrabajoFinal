@@ -13,6 +13,9 @@ public class Clients extends Person{
 
     }
 
+    public Clients() {
+        super();
+    }
 
 
     public String getMail() {

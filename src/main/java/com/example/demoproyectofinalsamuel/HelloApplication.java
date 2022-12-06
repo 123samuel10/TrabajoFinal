@@ -1,5 +1,6 @@
 package com.example.demoproyectofinalsamuel;
 
+import com.example.demoproyectofinalsamuel.controllers.ModelFactoryController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -13,6 +14,8 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        ModelFactoryController mfc = ModelFactoryController.getInstance();
+        mfc.getLaboratory().getClientsService().startArrayListClient();
         Parent root=FXMLLoader.load(getClass().getResource("Home.fxml"));
         Scene scene=new Scene(root);
         stage.setScene(scene);
