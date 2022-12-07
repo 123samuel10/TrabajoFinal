@@ -35,7 +35,7 @@ public class ClientsServiceImpl implements ClientsService {
     }
 
 
-    public ObservableList<Clients> Search(List<Clients>clientsR,String client) {
+    public List<Clients> Search(List<Clients>clientsR,String client) {
         clientsR.forEach(clients -> {
             if (clients.getName().equals(client)) {
                 Alert alert=new Alert(Alert.AlertType.INFORMATION);
@@ -45,7 +45,7 @@ public class ClientsServiceImpl implements ClientsService {
             }
         });
 
-        return (ObservableList<Clients>) clientsR;
+        return clientsR;
 
     }
 
