@@ -11,7 +11,6 @@ public class Persistence {
 
     public static void saveClients(List<Clients> clientsList) throws IOException {
         String contenido="";
-
         for(Clients client : clientsList) {
             contenido += client.getId() + "~" +
                     client.getName() + "~" +
@@ -20,7 +19,6 @@ public class Persistence {
                     client.getMail()+ "\n"
             ;
         }
-
         ArchivoUtil.guardarArchivo(RUTA_ARCHIVO_CLIENTES,contenido,false);
 
     }
@@ -38,7 +36,6 @@ public class Persistence {
 
             Clients client= new Clients();
             linea = contenido.get(i);
-
             client.setId(linea.split("~")[0]);
 
             client.setName(linea.split("~")[1]);

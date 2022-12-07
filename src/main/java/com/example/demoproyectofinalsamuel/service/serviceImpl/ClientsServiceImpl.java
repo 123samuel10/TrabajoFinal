@@ -5,7 +5,6 @@ import com.example.demoproyectofinalsamuel.persistence.Persistence;
 import com.example.demoproyectofinalsamuel.service.ClientsService;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Alert;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -31,16 +30,12 @@ public class ClientsServiceImpl implements ClientsService {
 
     @Override
     public ObservableList<Clients> Search(String client) {
-      Search(clients,client);
+        Search(clients,client);
         return null;
     }
 
 
-    public List<Clients> getClients() {
-        return clients;
-    }
-
-    static List<Clients>Search(List<Clients>clientsR,String client){
+    public ObservableList<Clients> Search(List<Clients>clientsR,String client) {
         clientsR.forEach(clients -> {
             if (clients.getName().equals(client)) {
                 Alert alert=new Alert(Alert.AlertType.INFORMATION);
@@ -50,8 +45,18 @@ public class ClientsServiceImpl implements ClientsService {
             }
         });
 
-        return clientsR;
+        return (ObservableList<Clients>) clientsR;
+
     }
+
+
+    public List<Clients> getClients() {
+        return clients;
+    }
+
+
+
+
     public void startArrayListClient(){
 
         try {
